@@ -19,7 +19,7 @@ var rootEl = document.querySelector('#root'); // Arrow function example
 
 var myArr = [1, 2, 3];
 myArr.map(function (n) {
-  return n + 1; 
+  return n + 1;
 });
 var text1 = document.createElement("div");
 text1.innerHTML = "Arrow function";

@@ -1,20 +1,24 @@
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './build/index.js',
-  mode: 'development',
+  mode: 'production',
   
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  // plugins: [
+  //   new HtmlWebpackPlugin({template: './index.html'})
+  // ],
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: "babel-loader",
-      },
-    ],
+     { 
+      test: /\.txt$/, 
+      use: 'raw-loader' 
+      }
+    ]
+      
   },
 };
